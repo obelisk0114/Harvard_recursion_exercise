@@ -20,7 +20,7 @@ public class Count {
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Input the string : ");
-		String str = keyboard.next();
+		String str = keyboard.nextLine();
 		System.out.println("Input the character : ");
 		char ch = keyboard.next().charAt(0);
 		int ans = count(ch, str, 0);
