@@ -9,3 +9,9 @@ printReverse
 characterCount
 ## P.13 Removing Vowels from a String
 removeVowels
+## P.14 Recursive Backtracking: the n-Queens Problem
+nQueens
+## P.20 Recursive Backtracking II: Map Coloring
+Four color theorem
+
+https://en.wikipedia.org/wiki/Four_color_theorem
