@@ -9,6 +9,7 @@ printReverse
 characterCount
 ## P.13 Removing Vowels from a String
 removeVowels
+<br /> removeVowel2 doesn't use recursive method.
 ## P.14 Recursive Backtracking: the n-Queens Problem
 nQueens
 ## P.20 Recursive Backtracking II: Map Coloring
