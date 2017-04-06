@@ -22,7 +22,8 @@ public class N_Queens2 {
 		}
 		recordX = -1;
 		recordY = -1;
-		back = false;
+		//back = false;
+		back = true;
 		complete = false;
 	}
 	
@@ -45,10 +46,10 @@ public class N_Queens2 {
 			}
 		}
 		
-		back = false;
-		if ((result[n-1] != -1) && x != 0) {
-			back = true;
-		}
+//		back = false;
+//		if ((result[n-1] != -1) && x != 0) {
+//			back = true;
+//		}
 		
 		if (back) {
 			// Go back to the upper row, column move backwards
