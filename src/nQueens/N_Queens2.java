@@ -15,6 +15,8 @@ public class N_Queens2 {
 	private boolean back;        // Trace back to get anther solution 
 	private boolean complete;    // Mark whether we get one of a solution
 	
+	private int step;            // Record steps
+	
 	public N_Queens2(int n) {
 		result = new int[n];
 		for (int i = 0; i < n; i++) {
@@ -25,6 +27,8 @@ public class N_Queens2 {
 		//back = false;
 		back = true;
 		complete = false;
+		
+		step = 0;
 	}
 	
 	public void placeQueen2(int x, int y, int n) {
@@ -39,6 +43,7 @@ public class N_Queens2 {
 				result[y] = i;
 				recordX = i;
 				recordY = y;
+				step++;
 				placeQueen2(0, y + 1, n);
 				if (complete) {
 					return;
@@ -58,7 +63,7 @@ public class N_Queens2 {
 				System.exit(0);				
 			}
 			int back_to_next_col = result[y-1] + 1;
-			placeQueen2(back_to_next_col, y-1, n);			
+			placeQueen2(back_to_next_col, y-1, n);	
 		}
 		
 	}
@@ -91,7 +96,7 @@ public class N_Queens2 {
 			count++;
 			System.out.println();
 		}
-		System.out.println();
+		System.out.println("\nStep : " + step + "\n");
 	}
 	
 	public int getX() {
@@ -100,6 +105,10 @@ public class N_Queens2 {
 	
 	public int getY() {
 		return recordY;
+	}
+	
+	private void stepReset() {
+		step = 0;
 	}
 	
 	public static void main(String[] args) {
@@ -119,6 +128,7 @@ public class N_Queens2 {
 			}
 			x = nq2.getX() + 1;
 			y = nq2.getY();
+			nq2.stepReset();
 		}
 		
 		keyboard.close();
